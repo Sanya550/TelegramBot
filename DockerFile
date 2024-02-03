@@ -2,7 +2,7 @@
 FROM adoptopenjdk/openjdk17:alpine-jre
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /TelegramBot
 
 # Copy the Maven POM file and download the dependencies
 COPY pom.xml .
@@ -15,4 +15,4 @@ COPY src ./src
 RUN ./mvnw package -DskipTests
 
 # Specify the command to run your application
-CMD ["java", "-jar", "out/artifacts/telegramBot_jar/telegramBot_jar"]
+CMD ["java", "-cp", "src/main/java", "Bot"]
