@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as a base image
-FROM adoptopenjdk/openjdk17:alpine-jre
+FROM openjdk:17-alpine
 
 # Set the working directory inside the container
 WORKDIR /TelegramBot
